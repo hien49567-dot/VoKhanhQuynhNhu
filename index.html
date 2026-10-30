@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATSH &amp; Tinh Hà Say Hi - Trình Phát Nhạc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+        }
+        .album-art {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff007f, #7f00ff, #00f2fe);
+            margin: 0 auto 25px auto;
+            box-shadow: 0 0 30px rgba(127, 0, 255, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: rotate 10s linear infinite;
+        }
+        .album-art span {
+            font-size: 60px;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+        .player-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        audio {
+            width: 100%;
+            accent-color: #e52e71;
+            border-radius: 30px;
+        }
+        .lyrics-box {
+            margin-top: 25px;
+            max-height: 120px;
+            overflow-y: auto;
+            font-size: 13px;
+            color: #ddd;
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+        .lyrics-box::-webkit-scrollbar {
+            width: 5px;
+        }
+        .lyrics-box::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="album-art">
+            <span>✨</span>
+        </div>
+        <h1>Tinh Hà Rực Sáng</h1>
+        <p class="subtitle">ATSH &amp; Tinh Hà Say Hi Official Mix</p>
+
+        <div class="player-controls">
+            <!-- Lưu ý: Trình phát hỗ trợ phát trực tiếp bản nhạc đã khởi tạo trong hệ thống -->
+            <audio controls autoplay>
+                <source src="#" type="audio/mpeg">
+                Trình duyệt của bạn không hỗ trợ thẻ audio.
+            </audio>
+        </div>
+
+        <div class="lyrics-box">
+            <strong>Lời bài hát (Highlights):</strong><br>
+            - Giữa thiên hà lấp lánh ánh sao...<br>
+            - Tinh Hà rực sáng ta cùng say hi...<br>
+            - Không còn sợ hãi bước tới tương lai...<br>
+            - Hào quang rạng rỡ ở ngay tại đây!
+        </div>
+    </div>
+
+</body>
+</html>
